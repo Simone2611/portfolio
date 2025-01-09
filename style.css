@@ -5,6 +5,9 @@
   --testo: #fff;
   --testo_2: #d3d3d3;
   --col: #ffd700;
+  --sb-track-color: #232e33;
+  --sb-thumb-color: var(--col);
+  --sb-size: 14px;
 }
 
 *,
@@ -19,12 +22,6 @@ body {
   background-color: var(--background);
   color: var(--testo);
   font-family: Montserrat;
-}
-
-body {
-  --sb-track-color: #232e33;
-  --sb-thumb-color: var(--col);
-  --sb-size: 14px;
 }
 
 body::-webkit-scrollbar {
