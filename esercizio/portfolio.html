@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simone Vitale</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1>Simone Vitale</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#il_mio_percorso">Il mio percorso</a></li>
+            <li><a href="#progetti">Progetti</a></li>
+            <li><a href="#contatti">Contattami</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div>
+          <h2>Benvenuto nel mio portfolio</h2>
+          <p>
+            Mi chiamo Simone Vitale, sono uno studente che frequesnta il corso
+            di Software Developer presso Galdus. Qua potrai trovare informazioni
+            riguardanti il mio percorso e i progetti che ho realizzato. Se sei
+            interessato visualizza il mio github.
+          </p>
+
+          <button id="github" class="github">
+            <img width="120" src="github-logo-vector.svg" alt="github_logo" />
+          </button>
+        </div>
+        <div>
+          <img width="100%" src="heroimg.jpg" alt="hero_image" />
+        </div>
+      </div>
+      <div id="info" class="info">
+        <h1>Linguaggi di programmazione che conosco:</h1>
+        <section class="info-card">
+          <h2>HTML</h2>
+          <p>
+            HTML è un linguaggio di markup utilizzato per la strutturazione di
+            pagine web. Conosco le basi di HTML e so come utilizzare i tag
+            principali.
+          </p>
+        </section>
+        <section class="info-card">
+          <h2>CSS</h2>
+          <p>
+            CSS è un linguaggio utilizzato per la formattazione di pagine web.
+            Conosco le basi di CSS e so come utilizzare le regole di stile.
+          </p>
+        </section>
+        <section class="info-card">
+          <h2>JavaScript</h2>
+          <p>
+            JavaScript è un linguaggio di programmazione utilizzato per
+            aggiungere interattività alle pagine web. Conosco le basi di
+            JavaScript e so come utilizzare le funzioni e le variabili.
+          </p>
+        </section>
+        <section class="info-card">
+          <h2>Python</h2>
+          <p>
+            Python è un linguaggio di programmazione ad alto livello. Conosco le
+            basi di Python e so come utilizzare le funzioni e le variabili.
+          </p>
+        </section>
+        <section class="info-card">
+          <h2>Java</h2>
+          <p>
+            Java è un linguaggio di programmazione ad alto livello. Conosco le
+            basi di Java e so come utilizzare le funzioni e le variabili.
+          </p>
+        </section>
+      </div>
+      <div id="il_mio_percorso" class="il_mio_percorso">
+        <h1>Il mio percorso scolastico</h1>
+        <div class="scuola">
+          <div>
+            <h2>Galdus | Software Developer (IFTS)</h2>
+            <p>Ho svolto la scuola per Software Developer presso Gadlus.</p>
+            <p>
+              Durante il periodo scolastico ho imparato i seguenti programmi:
+              HTML, CSS, JS, Python, Java
+            </p>
+            <p>
+              ho svolto anche lezioni di: Project Management, UX, Green
+              (sostenibilità)
+            </p>
+          </div>
+          <div>
+            <h2>CFP canossa | Graphic designer (CFP)</h2>
+            <p>
+              Ho svolto la scuola di grafica multimediale presso il CFP Canossa.
+            </p>
+            <p>
+              Durante il periodo scolastico ho imparato i seguenti programmi:
+              Photoshop, Illustrator, Indesign, Blender, HTML, CSS, JS.
+            </p>
+          </div>
+        </div>
+        <h1>Stage</h1>
+        <div class="scuola">
+          <div>
+            <h2>Erasmus | 30 Giugno 2024 - 20 Luglio 2024</h2>
+            <p>Erasmus svolto a Setùbal (Portogallo).</p>
+            <p>
+              Lavoro svolto durante l’erasmus: Progetti grafici e preparazione
+              di File per la stampa.
+            </p>
+          </div>
+          <div>
+            <h2>Stage PING S.r.l | Ottobre 2023 – Aprile 2024</h2>
+            <p>Alternanza scuola lavoro svolta presso PING srl.</p>
+            <p>
+              Lavoro svolto durante l’alternanza: Programmazione e sviluppo
+              progetti grafici.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="progetti" class="progetti"></div>
+    </main>
+    <footer>
+      <ul>
+        <li>Grazie per aver visualizzato il mio portfolio!</li>
+        <li>
+          Email:
+          <a
+            href="mailto:simone26v@gmail.com?subject=Ciao!&body=Ti sto contattando per"
+            >simone26v@gmail.com</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script>
+      const github = document.getElementById("github");
+      github.addEventListener("click", (e) => {
+        window.location.href = "https://github.com/Simone2611";
+      });
+
+      const info_card = document.querySelectorAll(".info-card");
+
+      info_card.forEach((card) => {
+        card.addEventListener("mouseover", (e) => {
+          card.querySelector("p").classList.add("show");
+          card.querySelector("p").classList.remove("hidden");
+        });
+        card.addEventListener("mouseout", (e) => {
+          card.querySelector("p").classList.add("hidden");
+          card.querySelector("p").classList.remove("show");
+        });
+      });
+    </script>
+  </body>
+</html>

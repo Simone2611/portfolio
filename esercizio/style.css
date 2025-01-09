@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --background: #242424;
+  --testo: #fff;
+  --testo_2: #d3d3d3;
+  --col: #ffd700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--testo);
+  font-family: Montserrat;
+}
+
+body {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: var(--col);
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+img {
+  user-select: none;
+}
+
+h1 {
+  color: var(--col);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100px;
+}
+
+.navbar h1 {
+  user-select: none;
+}
+
+.navbar ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li a {
+  color: var(--testo);
+  text-decoration: none;
+  padding: 10px;
+  box-shadow: none;
+  transition: 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: var(--col);
+  box-shadow: var(--col) 0px 4px 0px 0px;
+  transition: 0.3s ease;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 90vw;
+  height: 100vh;
+  margin-top: 100px;
+  border-bottom: 4px solid var(--col);
+}
+
+.hero div:first-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  padding: 10px;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.hero div:last-child {
+  min-width: 50%;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.hero h2 {
+  font-size: 50px;
+}
+
+.hero div img {
+  border-radius: 10px;
+}
+
+.github {
+  color: var(--testo);
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.github:hover {
+  transform: scale(1.05);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+  margin: 50px auto;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+.info-card {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  height: 80px;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+.info-card:hover {
+  background-color: rgba(255, 215, 0, 0.5);
+  height: 120px;
+}
+
+.info-card p {
+  transition: 0.3s ease;
+  visibility: hidden;
+  transform: scaleY(0);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.info-card p.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+}
+
+.info-card p.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+.info-card h2,
+.info-card p {
+  padding: 5px;
+}
+
+.il_mio_percorso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+  margin: 50px auto;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+.il_mio_percorso > h1 {
+  user-select: none;
+}
+
+.percorso_info {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.scuola {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.scuola div {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.scuola div:hover {
+  background: rgba(255, 215, 0, 0.5);
+  transform: scale(1.02);
+}
+
+.scuola h2 {
+  padding: 10px;
+}
+
+.scuola p {
+  padding: 10px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  border-top: var(--col) 4px solid;
+  padding: 20px;
+  max-width: 100vw;
+  height: fit-content;
+}
+
+footer > ul {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 5px;
+  font-size: 20px;
+  list-style-type: none;
+}
